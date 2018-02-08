@@ -31,7 +31,9 @@
               computerPickElem.innerText = 'Computer seletion';
               playerResultElem.innerText = '';
               computerResultElem.innerText = '';
-        case 'notStarted':
+              playerPointsElem.style.backgroundColor = computerPointsElem.style.backgroundColor = '#777';
+              /* falls through */
+        case 'notStarted':/* falls through */
         default:
             newGameElem.style.display = 'block';
             pickElem.style.display = 'none';
@@ -111,4 +113,4 @@
             alert('You lose ' + player.name + ' \:\(');
         }
     }
-})()
+})();
